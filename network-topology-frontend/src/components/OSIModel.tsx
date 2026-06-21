@@ -135,7 +135,7 @@ export const OSIModel: React.FC = () => {
           </Col>
           
           <Col span={12}>
-            <Title level={5} style={{ textAlign: 'center' }}>TCP/IP (Prático)</Title>
+            <Title level={5} style={{ textAlign: 'center' }}>TCP/IP</Title>
             {renderTCPBlock('Aplicação', '166px', '#eb2f96', [7, 6, 5].includes(selectedLayerId))}
             {renderTCPBlock('Transporte', '50px', '#1890ff', selectedLayerId === 4)}
             {renderTCPBlock('Internet', '50px', '#52c41a', selectedLayerId === 3)}
