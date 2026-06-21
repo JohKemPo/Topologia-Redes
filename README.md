@@ -1,38 +1,56 @@
-# Topologia-Redes
+Antes de iniciar a instalação e execução do projeto, certifique-se de ter o **`Conda`** instalado e as dependências Python do backend, além do **`Node.js`** com o **`npm`**  para a instalação dos pacotes e execução do servidor de desenvolvimento do frontend.
 
+### Backend (Python / FastAPI)
 
+1. Acesse o diretório:
+
+```bash
 cd network-topology-backend
+
+```
+
+2. Ative o ambiente (Conda):
+
+```bash
+conda activate Redes2
+
+```
+
+3. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+4. Inicie o servidor (exige `sudo` para o rastreamento de rede):
+
+```bash
 sudo $(which python) -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 
+```
+
+---
+
+### Frontend (Node.js / React)
+
+1. Abra um novo terminal e acesse o diretório:
+
+```bash
 cd network-topology-frontend
+
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+
+```
+
+3. Inicie a aplicação:
+
+```bash
 npm run dev
 
-Exemplos:
-
-
-## Grandes Portais (Ideal para testar rotas nacionais e rápidas)
-
-* uol.com.br (Servidores no Brasil, excelente para testar latência local)
-* ://globo.com (Infraestrutura robusta nacional)
-* google.com.br (Geralmente resolve para servidores da Google no Brasil)
-
-## Infraestrutura de Nuvem e Redes de Distribuição (CDN)
-
-* cloudflare.com (Usa rede Anycast; o teste deve ir para o servidor mais próximo de você)
-* ://amazon.com (Infraestrutura global da Amazon)
-* fastly.com (Grande provedor de CDN internacional)
-
-## Servidores Globais (Para testar rotas internacionais longas)
-
-* bbc.co.uk (Reino Unido - Europa)
-* tokyo-sports.co.jp (Japão - Ásia)
-* sydney.edu.au (Austrália - Oceania)
-* gov.za (África do Sul - África)
-
-## Servidores de Jogos (Ótimos para analisar oscilação de ping e perda de pacotes)
-
-* riotgames.com (Servidores da Riot Games)
-* valve.com (Servidores da Valve/Steam)
-
-uchicago.edu
-baidu.com
+```
